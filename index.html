@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Phaser</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+
+    <script src="TelaMenu.js"></script>
+    <script src="TelaJogo.js"></script>
+    <script src="TelaJogo2.js"></script>
+    <script src="TelaGameOver.js"></script>
+    <script src="TelaWin.js"></script>
+    
+</head>
+
+<body>
+
+    <script>
+
+        const config = {
+            type: Phaser.AUTO,
+            width: 1450,
+            height: 1000,
+            physics: { default: 'arcade', arcade: { debug: false } },
+            scene: [MenuScene, GameScene, GameScene2, GameOverScene, WinScene] // Adicionando as cenas  
+        };
+
+        const game = new Phaser.Game(config);
+
+    </script>
+    
+</body>
+</html>
